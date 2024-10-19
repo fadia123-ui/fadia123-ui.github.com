@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP Darul Hikam</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="Image.jpg">
+        </div>
+
+        <div>
+            <a href="project2.html">Beranda</a>
+            <a href="keunggulan.html">Keunggulan</a>
+            <select id="link-select" onchange="location= this.value;">
+                <option value="">Kesiswaan</option>
+                <option value="prestasi.html">Prestasi Siswa</option>
+                <option value="ODM.html">ODM</option>
+                <option value="Ekskul.html">Ekstrakulikuler</option>
+                <option value="PSAS.html">Seragam PSAS</option>
+            </select>
+            <select id="link-select" onchange="location= this.value;">
+                <option value="#">Artikel</option>
+                <option value="berita.html">Berita</option>
+                <option value="karya.html">Karya Tulis</option>
+                <option value="magazine.html">E-Magazine</option>
+            </select>
+            <a href="kontak.html">Kontak</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </header>
+<main>
+    <section class="divider"><h1 class="hover-text"><span style="color: rgb(47, 69, 126);">Prestasi Siswa</span>  SMP Darul Hikam</h1></section>  
+    <section>
+        <article class="tblprestasi">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nomor</th>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Prestasi</th>
+                    <th>Tingkat</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr><td>1</td><td>Daffa Fauzan Firdaus</td><td>X</td><td>82</td><td>Nasional</td></tr>
+                <tr><td>2</td><td>Dhabith Hilmi Wildany</td><td>X</td><td>81</td><td>Provinsi</td></tr>
+                <tr><td>3</td><td>Hannan Fadlin Akbar</td><td>XI</td><td>83</td><td>Nasional</td></tr>
+                <tr><td>4</td><td>Amirah Ratifah Nur Azizah</td><td>XII</td><td>84</td><td>Nasional</td></tr>
+                <tr><td>5</td><td>Naira Arsyakayla Nafiza</td><td>X</td><td>84</td><td>Provinsi</td></tr>
+                <tr><td>6</td><td>Nasywah Nafizka Syabanya</td><td>XI</td><td>91</td><td>Nasional</td></tr>
+                <tr><td>7</td><td>Nisrina Asma Nadhifah</td><td>XII</td><td>91</td><td>Provinsi</td></tr>
+                <tr><td>8</td><td>Adinda Siti Vaudiea Kesumah</td><td>X</td><td>93</td><td>Nasional</td></tr>
+                <tr><td>9</td><td>Makaila Gadish Kishmetia</td><td>XI</td><td>94</td><td>Nasional</td></tr>
+                <tr><td>10</td><td>Kania Alesha Rifaya</td><td>XII</td><td>94</td><td>Provinsi</td></tr>
+                <tr><td>11</td><td>Mauly Kasya Zalita</td><td>X</td><td>95</td><td>Nasional</td></tr>
+                <tr><td>12</td><td>Nikeisha Hafidzah Bilbina</td><td>XI</td><td>95</td><td>Nasional</td></tr>
+                <tr><td>13</td><td>Laqeesha Rizqueena Putri H.</td><td>XII</td><td>95</td><td>Provinsi</td></tr>
+                <tr><td>14</td><td>Keiva Putri</td><td>X</td><td>84</td><td>Nasional</td></tr>
+                <tr><td>15</td><td>Muhammad Hibban Azmi</td><td>XI</td><td>74</td><td>Provinsi</td></tr>
+                <tr><td>16</td><td>Rafika Anisa</td><td>XII</td><td>91</td><td>Nasional</td></tr>
+                <tr><td>17</td><td>Aldo Dwi Pranata</td><td>X</td><td>71</td><td>Nasional</td></tr>
+                <tr><td>18</td><td>Putri Anugerah</td><td>XI</td><td>83</td><td>Provinsi</td></tr>
+                <tr><td>19</td><td>Rania Syafira</td><td>XII</td><td>74</td><td>Nasional</td></tr>
+                <tr><td>20</td><td>Ilham Zaki</td><td>X</td><td>84</td><td>Nasional</td></tr>
+              
+            </tbody>
+        </table>
+        <script>
+            function searchTable() {
+                const input = document.getElementById('searchInput');
+                const filter = input.value.toLowerCase();
+                const table = document.getElementById('dataTable');
+                const tr = table.getElementsByTagName('tr');
+    
+                for (let i = 1; i < tr.length; i++) {
+                    const td = tr[i].getElementsByTagName('td')[1]; 
+                    if (td) {
+                        const txtValue = td.textContent || td.innerText;
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                            tr[i].style.display = ""; 
+                            tr[i].style.display = "none"; 
+                        }
+                    }
+                }
+            }
+        </script>
+    </article>
+    </section>
+</main>
+    <footer class="first">
+        <img src="https://smpdarulhikam.sch.id/wp-content/uploads/2021/12/New-Logo-White-SMP.png" alt="Logo" />
+        <div>
+            <h4>Contact</h4>
+            <p>Email: smp@darulhikam.com</p>
+            <p>Phone: 087825973929</p>
+        </div>
+        <div>
+            <h4>Sekolah</h4>
+            <p>Keunggulan</p>
+            <p>Kesiswaan</p>
+            <p>Artikel</p>
+            <p>Kontak</p>
+            <p>Pendaftaran</p>
+        </div>
+        <div>
+            <h4>Tautan</h4>
+            <ul>
+                <li><a href="https://darulhikam.sch.id">Majelis Pendidikan Darul Hikam</a></li>
+                <li><a href="https://sisfo.smpdarulhikam.sch.id/simdik/auth/login">SISFO</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <footer class="second">
+        Developed & Designed by Fadia<br>
+        &copy; SMAN 3 Bandung 2024
+    </footer>
+
+</body>
+</html>
